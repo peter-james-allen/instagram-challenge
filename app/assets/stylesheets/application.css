@@ -13,3 +13,98 @@
  *= require_tree .
  *= require_self
  */
+ .post {
+  width: 615px;
+  border-radius: 4px;
+  box-shadow:0px 0px 0px 1px lightgrey inset;
+  margin: auto;
+  font-family: arial;
+  margin-top: 20px;
+}
+
+.post-header {
+  height: 60px;
+  line-height: 60px;
+  margin-left: 20px;
+  display: flex;
+ }
+
+.post-likes {
+  height: 60px;
+  line-height: 60px;
+  margin-left: 20px;
+  display: flex;
+ }
+
+.post-picture {
+  height: 460px;
+  width: 100%;
+}
+
+.post-footer {
+  height: 125px;
+  margin-left: 20px;
+}
+
+.post-comment {
+  height: 50px;
+  line-height: 50px;
+  margin-left: 20px;
+  color: lightgrey;
+}
+
+span {
+  margin-left: 10px;
+}
+
+.user-icon {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: lightgrey;
+  border-width: 1px;
+  margin-top: 15px;
+}
+
+.like-icon {
+  height: 30px;
+  width: 30px;
+  margin-top: 15px;
+}
+
+.user-name {
+  margin-left: 20px;
+}
+
+.heart {
+  color: lightgrey;
+}
+
+.heart:hover {
+  color: red;
+}
+
+.date {
+  color: lightgrey;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.post-comment a {
+  color: lightgrey;
+  text-decoration: none;
+}
+
+.post-comment a:hover {
+  color: darkblue;
+}
+
+.tag {
+  margin-bottom: 10px;
+}
+
+.post-button {
+  float: right;
+  margin-right: 30px;
+}
