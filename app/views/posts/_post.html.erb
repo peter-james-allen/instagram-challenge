@@ -2,9 +2,9 @@
 
       <div class="post-header">
         <div class="icon">
-          <img class="user-icon" src="https://st4.depositphotos.com/1000507/23792/v/950/depositphotos_237929948-stock-illustration-kids-lego-head-icon-isolated.jpg">
+          <img class="user-icon" src="<%= User.find(post.user_id).icon %>">
         </div>
-        <div class="user-name"><b>Username</b></div>
+        <div class="user-name"><b><%= User.find(post.user_id).username %></b></div>
       </div>
 
       <img class="post-picture" src="<%= post.url %>">
@@ -16,10 +16,10 @@
 
       <div class="post-footer">
         <div class="tag">
-          <b>Username</b>
-          <span>Here is some text to go along with this image</span>
+          <b><%= User.find(post.user_id).username %></b>
+          <span><%= post.text %></span>
         </div>
-        <div class="date">Date and Time</div>
+        <div class="date"><%= post.created_at.to_s[0..-8] %></div>
         <div class="comment">
           <b>User1</b>
           <span>This is where the first comment goes</span>
