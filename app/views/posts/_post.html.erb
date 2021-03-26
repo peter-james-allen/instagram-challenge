@@ -2,9 +2,9 @@
 
       <div class="post-header">
         <div class="icon">
-          <img class="user-icon" src="<%= User.find(post.user_id).icon %>">
+          <img class="user-icon" src="<%= post.user.icon %>">
         </div>
-        <div class="user-name"><b><%= User.find(post.user_id).username %></b></div>
+        <div class="user-name"><b><%= post.user.username %></b></div>
       </div>
 
       <img class="post-picture" src="<%= post.url %>">
@@ -16,7 +16,7 @@
 
       <div class="post-footer">
         <div class="tag">
-          <b><%= User.find(post.user_id).username %></b>
+          <b><%= post.user.username %></b>
           <span><%= post.text %></span>
         </div>
         <div class="date"><%= post.created_at.to_s[0..-8] %></div>

@@ -100,6 +100,15 @@ span {
   color: darkblue;
 }
 
+.post-footer a {
+  color: lightgrey;
+  text-decoration: none;
+}
+
+.post-footer a:hover {
+  color: darkblue;
+}
+
 .tag {
   margin-bottom: 10px;
 }
