@@ -1,9 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
+<div class="fixed-header">
+  <div class="container">
+    <nav>
+      <a class="home" href="/">Instagram</a>
+      <a class="signin" href="#">Sign In</a>
+    </nav>
+  </div>
+</div>
 
-<%= link_to 'New Post', new_post_path %>
-
+<div class="body">
+  <div class="new-post">
+    <%= link_to 'New Post', new_post_path %>
+  </div>
   <%= render @posts %>
-
+</div>
 

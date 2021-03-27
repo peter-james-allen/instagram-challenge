@@ -13,6 +13,41 @@
  *= require_tree .
  *= require_self
  */
+ .home {
+  margin-left: 5%;
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  font-size: 30px;
+}
+
+.signin {
+  float: right;
+  margin-right: 5%;  
+  font-size: 18px;
+}
+
+.body {
+  padding-top: 50px;
+  font-family: arial;
+}
+
+.fixed-header {
+  width: 100%;
+  position: fixed;        
+  background: #333;
+  padding: 10px 0;
+  color: #fff;
+  font-family: arial;
+  top: 0;
+  left: 0;
+}
+
+nav a{
+  color: #fff;
+  text-decoration: none;
+  padding: 7px;
+  display: inline-block;
+}
+ 
  .post {
   width: 615px;
   border-radius: 4px;
@@ -116,4 +151,10 @@ span {
 .post-button {
   float: right;
   margin-right: 30px;
+}
+
+.new-post {
+  font-size: 15px;
+  margin-left: 28%;
+  padding-bottom: 10px;;
 }
