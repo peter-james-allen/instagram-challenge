@@ -42,7 +42,7 @@
 }
 
 .post-footer {
-  height: 125px;
+  min-height: 0px;
   margin-left: 20px;
 }
 

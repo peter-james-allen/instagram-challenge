@@ -20,14 +20,7 @@
           <span><%= post.text %></span>
         </div>
         <div class="date"><%= post.created_at.to_s[0..-8] %></div>
-        <div class="comment">
-          <b>User1</b>
-          <span>This is where the first comment goes</span>
-        </div>
-        <div class="comment">
-          <b>User2</b>
-          <span>This is where the second comment goes</span>
-        </div>
+        <%= render post.comments %>
         <a href="">Load 3 more comments</a>
       </div>
 
