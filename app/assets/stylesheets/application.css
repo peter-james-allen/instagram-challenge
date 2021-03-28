@@ -126,12 +126,12 @@ span {
   margin-bottom: 20px;
 }
 
-.post-comment a {
+.post-comment input {
   color: lightgrey;
   text-decoration: none;
 }
 
-.post-comment a:hover {
+.post-button:hover {
   color: darkblue;
 }
 
@@ -149,8 +149,17 @@ span {
 }
 
 .post-button {
+  all: unset;
   float: right;
   margin-right: 30px;
+}
+
+.post-text {
+  all: unset;
+}
+
+.post-text:focus {
+  color: black;
 }
 
 .new-post {
