@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[ show edit update destroy ]
-  before_action :logged_in_user, only: [:new, :create]
+  before_action :logged_in_user, only: [:new]
 
   # GET /posts or /posts.json
   def index

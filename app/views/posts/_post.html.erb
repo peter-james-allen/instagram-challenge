@@ -11,7 +11,11 @@
 
   <div class="post-likes">
     <%= form_with(model: post, method: :patch) do |form| %>
-      <input type="number" id="likes" name="post[likes]" value=<%= post.likes += 1%> style="display:none">
+      <% if logged_in? %>
+        <input type="number" id="likes" name="post[likes]" value="<%= liked?(post) ? unlike(post) : like(post) %>" style="display:none">
+      <% else %>
+        <input type="number" id="likes" name="post[likes]" value="<%= post.likes %>" style="display:none">
+      <% end %>
       <input type="image" alt="Submit" class="heart" style="height: 25px; width: 25px;" src="/heart.png">
     <% end %>
     <div class="user-name"><b><%= post.likes %> likes</b></div>

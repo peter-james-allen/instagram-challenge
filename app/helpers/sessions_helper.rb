@@ -1,6 +1,7 @@
 module SessionsHelper
   def log_in(user)
     session[:user_id] = user.id
+    session[:likes] = []
   end
 
   def current_user
@@ -30,4 +31,25 @@ module SessionsHelper
   def store_location
     session[:forwarding_url] = request.original_url if request.get?
   end
+
+  def liked?(post)
+    if session[:likes]
+      session[:likes].include?(post.id)
+    end
+  end
+
+  def like(post)
+    if session[:likes]
+      session[:likes].push(post.id)
+      post.likes + 1
+    end
+  end
+
+  def unlike(post)
+    if session[:likes]
+      session[:likes].delete(post.id)
+      post.likes - 1
+    end
+  end
+
 end
