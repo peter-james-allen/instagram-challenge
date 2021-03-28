@@ -167,3 +167,10 @@ span {
   margin-left: 28%;
   padding-bottom: 10px;;
 }
+
+
+.login-form {
+  width: 150px;
+  margin: auto;
+  text-align: center;
+}

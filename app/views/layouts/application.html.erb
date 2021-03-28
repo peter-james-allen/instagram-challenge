@@ -9,7 +9,17 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'application', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<div class="fixed-header">
+  <div class="container">
+    <nav>
+      <a class="home" href="/">Instagram</a>
+      <a class="signin" href="/login">Sign In</a>
+    </nav>
+  </div>
+</div>
 
   <body>
     <%= yield %>
