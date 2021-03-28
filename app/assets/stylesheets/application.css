@@ -168,9 +168,21 @@ span {
   padding-bottom: 10px;;
 }
 
-
 .login-form {
   width: 150px;
+  margin: auto;
+  text-align: center;
+}
+
+.new-post-link {
+  width: 180px;
+  margin: auto;
+  text-align: center;
+}
+
+.new-post {
+  padding-top: 40px;
+  width: 180px;
   margin: auto;
   text-align: center;
 }
