@@ -74,8 +74,8 @@ nav a{
  }
 
 .post-likes {
-  height: 60px;
-  line-height: 60px;
+  height: 50px;
+  line-height: 50px;
   margin-left: 20px;
   display: flex;
  }
@@ -122,11 +122,15 @@ span {
 }
 
 .heart {
+  height: 30px;
+  width: 30px;
+  line-height: 40px;
+  all: unset;
   color: lightgrey;
 }
 
 .heart:hover {
-  color: red;
+  background-color: red;
 }
 
 .date {

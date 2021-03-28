@@ -26,8 +26,7 @@
   </div>
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+    <input type="number" id="user_id" name="post[user_id]" value=<%= @current_user.id %> style="display:none">
   </div>
 
   <div class="actions">

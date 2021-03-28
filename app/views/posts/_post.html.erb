@@ -1,36 +1,38 @@
-    <div class="post">
+<div class="post">
 
-      <div class="post-header">
-        <div class="icon">
-          <img class="user-icon" src="<%= post.user.icon %>">
-        </div>
-        <div class="user-name"><b><%= post.user.username %></b></div>
-      </div>
-
-      <img class="post-picture" src="<%= post.url %>">
-
-      <div class="post-likes">
-        <div class="icon like-icon fa fa-heart fa-2x heart"></div>
-        <div class="user-name"><b><%= post.likes %> likes</b></div>
-      </div>
-
-      <div class="post-footer">
-        <div class="tag">
-          <b><%= post.user.username %></b>
-          <span><%= post.text %></span>
-        </div>
-        <div class="date"><%= post.created_at.to_s[0..-8] %></div>
-        <%= render post.comments %>
-        <%# <a href="">Load 3 more comments</a> %>
-      </div>
-      
-      <%= form_with url: "/comments" do |form| %>
-        <div class="post-comment">
-          <input class="post-text" type="text" id="text" name="comment[text]" required placeholder="Add a Comment...">
-          <input type="number" id="user_id" name="comment[user_id]" value="<%= logged_in? ? @current_user.id : 0 %>" style="display:none">
-          <input type="number" id="post_id" name="comment[post_id]" value=<%= post.id %> style="display:none">
-          <input class="post-button" type="submit" value="Post">
-        </div>
-      <% end %>
-      
+  <div class="post-header">
+    <div class="icon">
+      <img class="user-icon" src="<%= post.user.icon %>">
     </div>
+    <div class="user-name"><b><%= post.user.username %></b></div>
+  </div>
+
+  <img class="post-picture" src="<%= post.url %>">
+
+  <div class="post-likes">
+    <%= form_with(model: post, method: :patch) do |form| %>
+      <input type="number" id="likes" name="post[likes]" value=<%= post.likes += 1%> style="display:none">
+      <input type="image" alt="Submit" class="heart" style="height: 25px; width: 25px;" src="/heart.png">
+    <% end %>
+    <div class="user-name"><b><%= post.likes %> likes</b></div>
+  </div>
+
+  <div class="post-footer">
+    <div class="tag">
+      <b><%= post.user.username %></b>
+      <span><%= post.text %></span>
+    </div>
+    <div class="date"><%= post.created_at.to_s[0..-8] %></div>
+    <%= render post.comments %>
+  </div>
+  
+  <%= form_with url: "/comments" do |form| %>
+    <div class="post-comment">
+      <input class="post-text" type="text" id="text" name="comment[text]" required placeholder="Add a Comment...">
+      <input type="number" id="user_id" name="comment[user_id]" value="<%= logged_in? ? @current_user.id : 0 %>" style="display:none">
+      <input type="number" id="post_id" name="comment[post_id]" value=<%= post.id %> style="display:none">
+      <input class="post-button" type="submit" value="Post">
+    </div>
+  <% end %>
+  
+</div>
