@@ -129,6 +129,15 @@ span {
   color: lightgrey;
 }
 
+.heart-liked {
+  height: 30px;
+  width: 30px;
+  line-height: 40px;
+  all: unset;
+  color: lightgrey;
+  background-color: red;
+}
+
 .heart:hover {
   background-color: red;
 }
