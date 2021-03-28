@@ -17,6 +17,7 @@
     <nav>
       <a class="home" href="/">Instagram</a>
       <% if logged_in? %>
+      <div class="greeter">Hi <%= @current_user.username %>!</div>
       <a class="signin" href="/logout" data-method="DELETE">Sign Out</a>
       <% else %>
       <a class="signin" href="/login">Sign In</a>
