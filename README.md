@@ -3,6 +3,9 @@ Instagram Challenge
 
 About
 -------
+This is a challenge to create a instagram clone that allows users to post images to a public stream and comment on other pictures. This was my first attempt at ccreating an app with ruby-on-rails.
+
+
 
 Installation
 ----
@@ -50,17 +53,11 @@ Then open your broswer navigate to
 ```
 localhost:9292
 ```
-You are now on the Chitter homepage!
+You are now on the Instagram homepage!
 
 Testing
 ----
 
 ## Code Quality
 
-For linting, you can use the `.rubocop.yml` in this repository (or your own!).
-You'll need these gems:
-
-```ruby
-gem "rubocop", "0.79.0", require: false
-gem "rubocop-rails"
-```
+The project was linted with rubocop
