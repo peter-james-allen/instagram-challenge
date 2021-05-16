@@ -1,28 +1,59 @@
 Instagram Challenge
 ===================
 
-## Instructions
+About
+-------
 
-* Feel free to use Google, your notes, books, etc., but work on your own
-* If you refer to the solution of another coach or student, please put a link to that in your README
-* If you have a partial solution, **still check in a partial solution**
-* You must submit a pull request to this repo with your code by 9am Monday morning
+Installation
+----
+### Requirements
+You need to have ruby and postgreSQL installed
+```
+https://www.ruby-lang.org/en/downloads/
+https://www.postgresql.org/download/
+```
 
-## Task
+### Set Up
 
-Build Instagram: Simple huh!
+To get started clone this repo locally
+```
+git clone https://github.com/peter-james-allen/instagram-challenge.git
+```
 
-Your challenge is to build Instagram using Rails. You'll need **users** who can post **pictures**, write **comments** on pictures and **like** a picture. Style it like Instagram's website (or more awesome).
+In the root folder run bundle and yarn to fetch dependancies
+```
+bundle install
+yarn
+```
 
-Bonus if you can add filters!
+Create a .env file in the root folder with your postgreSQL username and password
+```
+PG_USERNAME=your_username
+PG_PASSWORD=your_password
+```
 
-## How to start
+Run the database creation and migrations
+```
+rake db:create
+rake db:migrate
+```
 
-1. Produce some stories, break them down into tasks, and estimate
-2. Fork this repo, clone, etc
-3. Initialize a new rails project
+You are now ready to go. Check out the user guide to get started
 
-Remember to proceed in small steps! Getting confused? Make the steps even smaller.
+User Guide
+----
+To start the program run rackup in the root folder
+```
+rackup
+```
+Then open your broswer navigate to
+```
+localhost:9292
+```
+You are now on the Chitter homepage!
+
+Testing
+----
 
 ## Code Quality
 
@@ -33,7 +64,3 @@ You'll need these gems:
 gem "rubocop", "0.79.0", require: false
 gem "rubocop-rails"
 ```
-
-You can also lint Javascript, CSS, and ERB — feel free to research this. These
-will help you to train yourself to produce cleaner code — and will often alert
-you to mistakes or mishaps!
