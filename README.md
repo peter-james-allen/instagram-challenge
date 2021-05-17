@@ -1,6 +1,8 @@
 Instagram Challenge
 ===================
 
+![Homepage](./homepage.png)
+
 About
 -------
 This is a challenge to create a instagram clone that allows users to post images to a public stream and comment on other pictures. This was my first attempt at ccreating an app with ruby-on-rails.

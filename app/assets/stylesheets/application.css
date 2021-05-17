@@ -58,7 +58,7 @@ nav a{
 }
  
  .post {
-  width: 615px;
+  width: 400px;
   border-radius: 4px;
   box-shadow:0px 0px 0px 1px lightgrey inset;
   margin: auto;
@@ -81,7 +81,7 @@ nav a{
  }
 
 .post-picture {
-  height: 460px;
+  height: 300px;
   width: 100%;
 }
 
