@@ -45,19 +45,30 @@ You are now ready to go. Check out the user guide to get started
 
 User Guide
 ----
-To start the program run rackup in the root folder
+To start the server in the root folder run
 ```
-rackup
+ruby .\bin\rails s
 ```
 Then open your broswer navigate to
 ```
-localhost:9292
+localhost:3000
 ```
 You are now on the Instagram homepage!
 
-Testing
-----
+### Sign up
+To sign up for an account click on the 'Sign In' button in the top right hand corner, then click on the 'Create one here' link below 'Dont have an account?', you will then be asked to enter a username, email, password and a link to a icon which will be your profile picture. One you have entered your details you will be logged in and directed to your profile page. Note: An error will be raised if you try to sign up with a username and email combination that is already registered.
 
-## Code Quality
+### Sign In
+If you already have an account then click on the 'Sign In' button in the top right hand corner. Enter your username and password and click 'Sign In'. You will then be logged in and returned to the homepage. If you enter the incorrect username and password an error will be raised.
 
-The project was linted with rubocop
+### Sign out
+To sign out, click on the 'Sign Out' button in the top right hand corner. You will be signed out and returned to the homepage.
+
+### Posts
+To post an image you have to be signed in. Click on the 'New Post' link at the top of the homepage. You can then enter the url which links to the photo you wish to post and any text you wish to post with the image.
+
+### Comments
+To comment on a post you have to be siged in. Click where it says 'Add a Comment' on the post and enter some text then click the 'Post' button. The comment will then appeard below the post.
+
+### Like
+To like/unlike a post click on the heart icon. The number of likes will increase or decrease depending on if you have liked it before.
